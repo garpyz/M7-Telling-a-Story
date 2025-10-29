@@ -58,11 +58,11 @@ stretch_mode = 5
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 900.0
-offset_top = 548.0
-offset_right = 1825.0
-offset_bottom = 705.0
-theme_override_font_sizes/normal_font_size = 100
+offset_left = 737.0
+offset_top = 397.0
+offset_right = 1717.0
+offset_bottom = 595.0
+theme_override_font_sizes/normal_font_size = 98
 text = "Hello World!"
 fit_content = true
 
