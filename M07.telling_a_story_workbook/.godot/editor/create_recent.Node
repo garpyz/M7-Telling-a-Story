@@ -1,4 +1,5 @@
 Button
+AudioStreamPlayer
 RichTextLabel
 TextureRect
 ColorRect
