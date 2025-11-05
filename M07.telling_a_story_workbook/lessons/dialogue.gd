@@ -12,26 +12,36 @@ var expressions := {
 	"sad": preload ("res://assets/emotion_sad.png"),
 }
 
+var bodies := {
+	"sophia": preload ("res://assets/sophia.png"),
+	"pink": preload ("res://assets/pink.png")
+}
+
 var dialogue_items: Array[Dictionary] = [
 	{
 		"expression": expressions["regular"],
-		"text": "Regular face",
+		"text": "Im regular sophia",
+		"character": bodies["sophia"],
 	},
 	{
 		"expression": expressions["sad"],
-		"text": "Sad face",
+		"text": "Im sad pink sophia",
+		"character": bodies["pink"],
 	},
 	{
 		"expression": expressions["happy"],
-		"text": "Happy face!",
+		"text": "Happy pink sophia!",
+		"character": bodies["pink"],
 	},
 	{
 		"expression": expressions["regular"],
-		"text": "Normal",
+		"text": "Normal pink sophia",
+		"character": bodies["pink"],
 	},
 	{
 		"expression": expressions["happy"],
-		"text": "Happy!!!!",
+		"text": "Happy normal sophia!!!!",
+		"character": bodies["sophia"],
 	},
 ]
 
@@ -61,12 +71,13 @@ func show_text() -> void:
 	expression.texture = current_item["expression"]
 	rich_text_label.visible_ratio = 0.0
 	var tween := create_tween()
-	var text_appearing_duration := 1.0
+	var text_appearing_duration: float = current_item["text"].length() / 30.0
 	tween.tween_property(rich_text_label, "visible_ratio", 1.0, text_appearing_duration)
 	var sound_max_offset := audio_stream_player.stream.get_length() - text_appearing_duration
 	var sound_start_position := randf() * sound_max_offset
 	audio_stream_player.play(sound_start_position)
 	tween.finished.connect(audio_stream_player.stop)
+	body.texture = current_item["character"]
 	slide_in()
 
 func advance() -> void:
