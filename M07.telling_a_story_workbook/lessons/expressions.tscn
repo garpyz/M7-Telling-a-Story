@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c5hks0yvn11s4"]
+[gd_scene load_steps=8 format=3 uid="uid://c5hks0yvn11s4"]
 
 [ext_resource type="Theme" uid="uid://drays61pfu7xc" path="res://lessons/main_theme.tres" id="1_offqj"]
+[ext_resource type="Script" uid="uid://057m1a3ct0n5" path="res://lessons/expressions.gd" id="2_uassf"]
 [ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="3_2l66d"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="4_8poul"]
 [ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="5_8k2r0"]
@@ -21,6 +22,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_offqj")
+script = ExtResource("2_uassf")
 
 [node name="Background" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_6cfwb")
