@@ -78,6 +78,10 @@ func show_text() -> void:
 	audio_stream_player.play(sound_start_position)
 	tween.finished.connect(audio_stream_player.stop)
 	body.texture = current_item["character"]
+	next_button.disabled = true
+	tween.finished.connect(func() -> void:
+		next_button.disabled = false
+	)
 	slide_in()
 
 func advance() -> void:
