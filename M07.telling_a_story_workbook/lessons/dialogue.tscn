@@ -75,6 +75,7 @@ offset_top = 397.0
 offset_right = 1717.0
 offset_bottom = 595.0
 theme_override_font_sizes/normal_font_size = 98
+bbcode_enabled = true
 text = "Hello World!"
 fit_content = true
 

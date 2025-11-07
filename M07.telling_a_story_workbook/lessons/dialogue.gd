@@ -20,27 +20,27 @@ var bodies := {
 var dialogue_items: Array[Dictionary] = [
 	{
 		"expression": expressions["regular"],
-		"text": "Im regular sophia",
+		"text": "Hey Pink, do you know who the worst fantasy nba player is?",
 		"character": bodies["sophia"],
 	},
 	{
 		"expression": expressions["sad"],
-		"text": "Im sad pink sophia",
+		"text": "I don't know, can you tell me?",
 		"character": bodies["pink"],
 	},
 	{
 		"expression": expressions["happy"],
-		"text": "Happy pink sophia!",
-		"character": bodies["pink"],
+		"text": "of course, it's: [rainbow val=0.8]Samson Wong[/rainbow]",
+		"character": bodies["sophia"],
 	},
 	{
 		"expression": expressions["regular"],
-		"text": "Normal pink sophia",
+		"text": "[tornado freq=1.0]Wow really??? I thought he had ball knowledge[/tornado]",
 		"character": bodies["pink"],
 	},
 	{
 		"expression": expressions["happy"],
-		"text": "Happy normal sophia!!!!",
+		"text": "[shake]He does but he lost to [rainbow val=0.8]Gavin[/rainbow][/shake]",
 		"character": bodies["sophia"],
 	},
 ]
@@ -80,6 +80,7 @@ func show_text() -> void:
 	body.texture = current_item["character"]
 	next_button.disabled = true
 	tween.finished.connect(func() -> void:
+		
 		next_button.disabled = false
 	)
 	slide_in()
